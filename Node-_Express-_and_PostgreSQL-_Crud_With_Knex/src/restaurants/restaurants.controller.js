@@ -31,6 +31,7 @@ async function restaurantExists(req, res, next) {
   next({ status: 404, message: `Restaurant cannot be found.` });
 }
 
+//CRUD Functions
 async function list(req, res, next) {
   const data = await restaurantsService.list();
   res.json({ data });

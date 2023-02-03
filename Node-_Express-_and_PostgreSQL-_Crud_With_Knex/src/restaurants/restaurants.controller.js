@@ -43,7 +43,7 @@ async function create(req, res, next) {
   .create(req.body.data)
   .then((data) => res.status(201).json({data}) )
   .catch(next)
-  //res.json({ data: {} });
+  res.json({ data: {} });
 }
 
 async function update(req, res, next) {
@@ -63,7 +63,7 @@ async function destroy(req, res, next) {
   .delete(res.locals.restaurant.restaurant_id)
   .then(() => res.sendStatus(204))
   .catch(next);
-  //res.json({ data: {} });
+  res.json({ data: {} });
 }
 
 module.exports = {

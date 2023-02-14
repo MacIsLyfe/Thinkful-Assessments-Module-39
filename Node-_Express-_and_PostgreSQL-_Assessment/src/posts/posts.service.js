@@ -7,7 +7,10 @@ function create(post) {
 }
 
 function read(postId) {
-  return db("posts").select("*").where({ post_id: postId }).first();
+  return db("posts")
+    .select("*")
+    .where({ post_id: postId })
+    .first();
 }
 
 function update(updatedPost) {
@@ -19,7 +22,9 @@ function update(updatedPost) {
 }
 
 function destroy(postId) {
-  return db("posts").where({post_id: postId}).del();
+  return db("posts")
+    .where({post_id: postId})
+    .del();
 }
 
 module.exports = {
